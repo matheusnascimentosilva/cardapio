@@ -1,6 +1,6 @@
 > **Remover esse comentário quando for usar o modelo:** Modelo feito para projetos com poucas funcionalidades, poucas telas e que foram feitos somente para aplicar novos conhecimentos. Ex: projetos com Vanilla JS, projetos mais do mesmo (pokédex, covid tracker, to-do, GitHub something-app), apps desktop, apps mobile, etc. 
 
-# Título do projeto {ícone que combine}
+# Cardápio online
 
 Descrição breve sobre o projeto
 
