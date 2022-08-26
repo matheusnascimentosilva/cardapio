@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Tororomba</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/style.css" />
+</head>
+
+<body id="page">
+  <!-- Tela de entrada -->
+  <div class="splash">
+    <div class="splash-logo">
+      <img src="./src/img/logo.svg" loading="lazy">
+    </div>
+  </div>
+  <!-- ./ Fim tela de entrada -->
+
+  <!-- Conteúdo principal -->
+  <main class="content">
+    <!-- Cabeçalho -->
+    <header>
+      <h1 class="title">
+        Menu
+      </h1>
+    </header>
+    <!-- ./ Fim cabeçalho -->
+
+    <!-- Botões de filtragem -->
+    <section class="categories-filter">
+      <ul class="categories-list-btns">
+        <li>
+          <button class="btn categorylinks active" onclick="openCategoryItems(event, 'info')">
+            <span class="material-icons">info</span>
+          </button>
+          <p>Informações</p>
+        </li>
+        <li>
+          <button class="btn categorylinks" onclick="openCategoryItems(event, 'menu')">
+            <span class="material-icons">menu_book</span>
+          </button>
+          <p>Cardápio</p>
+        </li>
+        <li>
+          <button class="btn categorylinks" onclick="openCategoryItems(event, 'activities')">
+            <span class="material-icons">directions_run</span>
+          </button>
+          <p>Lazer</p>
+        </li>
+        <li>
+          <button class="btn categorylinks" onclick="openCategoryItems(event, 'services')">
+            <span class="material-icons">miscellaneous_services</span>
+          </button>
+          <p>Serviços</p>
+        </li>
+      </ul>
+    </section> <!-- ./ Fim botões de filtragem -->
+
+    <!-- Listagem de conteúdo -->
+    <section class="categories-list">
+      <!-- Informações essenciais -->
+      <div id="info" class="filter info categorycontent invisible">
+        <div class="category-title">
+          <h2>Informações Essenciais</h2>
+        </div>
+
+        <div class="category-data">
+          <div class="subcategory">
+            <h3 class="subcategory-title">Check in e Check out</h3>
+            <div class="subcategory-data"></div>
+
+            <div class="attention">
+              <strong>
+                "As refeições estão sendo servidas à la carte ou na forma
+                de buffet assistido com o uso obrigatório de luvas e máscara
+                para se servir".
+              </strong>
+            </div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Horário das refeições</h3>
+            <div class="subcategory-data"></div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Cabana de praia e piscina</h3>
+            <div class="subcategory-data"></div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Toalha (Piscina - Praia)</h3>
+            <div class="subcategory-data"></div>
+
+            <div class="attention">
+              <ul>
+                <li>
+                  <strong>
+                    "As toalhas são retiradas e devolvidas na recepção";
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    "As toalhas do apartamento não poderão ser retiradas".
+                  </strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ./ Fim informações essenciais -->
+
+      <!-- Filtro do cardápio -->
+      <div id="menu" class="menu categorycontent invisible">
+        <div class="form">
+          <input type="text" placeholder="Procurar">
+        </div>
+
+        <div class="pill-nav">
+          <button class="tablinks active" onclick="openMenuOption(event, 'Food')">Comidas</button>
+          <button class="tablinks" onclick="openMenuOption(event, 'Drinks')">Bebidas</button>
+          <button class="tablinks" onclick="openMenuOption(event, 'Snacks')">Lanches</button>
+          <button class="tablinks" onclick="openMenuOption(event, 'Wines')">Vinhos</button>
+          <button class="tablinks" onclick="openMenuOption(event, '24Hours')">24 Horas</button>
+        </div>
+      </div> <!-- ./ Fim Filtro do cardápio -->
+
+      <!-- Cardápio -->
+      <div class="menu-data invisible">
+        <!-- Comidas -->
+        <div id="Food" class="filter tabcontent invisible">
+          <div class="category-title">
+            <h2>Comidas</h2>
+          </div>
+
+          <div class="category-data">
+            <div class="subcategory">
+              <h3 class="subcategory-title">Friturinhas</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Comidas de Praia</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Da Terra Para a Praia</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Ovos</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Individuais</h3> <span>(Entradas e Saladas)</span>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Massas e Risotos</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Carnes e Aves</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Peixes e Frutos do Mar</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Típicos da Terra Boa</h3> <span>(Servem 2 Pessoas)</span>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Pratos Kids</h3> <span>(Recomendado para crianças de até 12 anos)</span>
+              <div class="subcategory-data"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ./ Fim comidas -->
+
+        <!-- Bebidas -->
+        <div id="Drinks" class="filter tabcontent invisible">
+          <div class="category-title">
+            <h2>Bebidas</h2>
+          </div>
+
+          <div class="category-data">
+            <div class="subcategory">
+              <h3 class="subcategory-title">Soft Drinks</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Sucos</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Alcoólicos</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Garrafas</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Drinks</h3>
+              <div class="subcategory-data"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ./fim bebidas -->
+
+        <!-- Lanches -->
+        <div id="Snacks" class="filter tabcontent invisible">
+          <div class="category-title">
+            <h2>Lanches</h2>
+          </div>
+
+          <div class="category-data">
+            <div class="subcategory">
+              <h3 class="subcategory-title">Sanduíches</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Tapiocas</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Sobremesas</h3>
+              <div class="subcategory-data"></div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ./fim lanches -->
+
+        <!-- Vinhos -->
+        <div id="Wines" class="filter tabcontent invisible">
+          <div class="category-title">
+            <h2>Vinhos</h2>
+          </div>
+
+          <div class="category-data">
+            <div class="subcategory">
+              <h3 class="subcategory-title">Vinho Branco</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Vinho Tinto</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Vinho Rosé</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Vinho Verde</h3>
+              <div class="subcategory-data"></div>
+            </div>
+
+            <div class="subcategory">
+              <h3 class="subcategory-title">Espumante</h3>
+              <div class="subcategory-data"></div>
+            </div>
+          </div>
+
+          <div class="attention">
+            <strong>"Taxa de Rolha R$ 50,00 por garrafa"</strong>
+          </div>
+        </div>
+        <!-- ./fim vinhos -->
+
+        <!-- Cardápio 24 horas -->
+        <div id="24Hours" class="filter tabcontent invisible">
+          <div class="special-category-title">
+            <h2>24 Horas</h2>
+          </div>
+
+          <div class="category-data">
+            <div class="special-subcategory">
+              <h3 class="special-subcategory-title">Soft Drinks</h3>
+              <div class="special-subcategory-data"></div>
+            </div>
+
+            <div class="special-subcategory">
+              <h3 class="special-subcategory-title">Sucos</h3>
+              <div class="special-subcategory-data"></div>
+            </div>
+
+            <div class="special-subcategory">
+              <h3 class="special-subcategory-title">Alcoólicos</h3>
+              <div class="special-subcategory-data"></div>
+            </div>
+
+            <div class="special-subcategory">
+              <h3 class="special-subcategory-title">Lanches</h3>
+              <div class="special-subcategory-data"></div>
+            </div>
+
+            <div class="special-subcategory">
+              <h3 class="special-subcategory-title">Sanduíches</h3>
+              <div class="special-subcategory-data"></div>
+            </div>
+
+            <div class="special-subcategory">
+              <h3 class="special-subcategory-title">Café</h3>
+              <div class="special-subcategory-data"></div>
+            </div>
+          </div>
+
+          <div class="attention">
+            <strong>
+              "Os produtos listados no cardápio 24 Horas devem ser retirados na recepção, não trabalhamos com serviço de quarto"
+            </strong>
+          </div>
+        </div>
+        <!-- ./fim cardápio 24 horas -->
+      </div>
+      <!-- ./ Fim Cardápio -->
+
+      <!-- Programação do lazer -->
+      <div id="activities" class="filter activities categorycontent invisible">
+        <div class="category-title">
+          <h2>Lazer</h2>
+        </div>
+
+        <div class="category-data">
+          <div class="subcategory">
+            <h3 class="subcategory-title">Programação Adulto</h3>
+            <div class="subcategory-data">
+            </div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Programação Infantil</h3>
+            <div class="subcategory-data"></div>
+          </div>
+        </div>
+      </div>
+      <!-- ./ Fim programação do lazer -->
+
+      <!-- Serviços do resort -->
+      <div id="services" class="filter services categorycontent invisible">
+        <div class="category-title">
+          <h2>Serviços do Resort</h2>
+        </div>
+
+        <div class="category-data">
+          <div class="subcategory">
+            <h3 class="subcategory-title">Refeições</h3>
+            <div class="subcategory-data"></div>
+
+            <div class="attention">
+              <ul>
+                <li>
+                  <strong>
+                    "Não efetuamos a troca do jantar por almoço";
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    "Caso o cliente opte somente pela pensão café ou meia pensão,
+                    o nosso sistema de alimentação é de comida a quilo, cujo valor
+                    custa: R$ 69,90 o quilo".
+                  </strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Canais de TV</h3>
+            <div class="subcategory-data"></div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Serviços terceirizados</h3>
+            <div class="subcategory-data"></div>
+
+            <div class="attention">
+              <strong>
+                "Consultas de valores e disponibilidades
+                através dos números de telefone listados".
+              </strong>
+            </div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Translado</h3>
+            <div class="subcategory-data" style="text-align: justify;"></div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Ramais de Serviço</h3>
+            <div class="subcategory-data"></div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Frigobar</h3>
+            <div class="subcategory-data">
+            </div>
+
+            <div class="attention">
+              <ul>
+                <li>
+                  <strong>
+                    "Produtos retirados dos nossos pontos de venda não serão estornados";
+                  </strong>
+                </li>
+                <li>
+                  <strong>
+                    "Produtos de fora só poderão ser consumidos dentro do apartamento".
+                  </strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Wi-Fi</h3>
+            <div class="subcategory-data"></div>
+
+            <div class="attention">
+              <strong>"Para uso da rede interna do Tororomba, desligue os dados móveis."</strong>
+            </div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title" style="margin-bottom: 10px;">Serviços Complementares</h3>
+            <p style="font-size: 12px; margin-top: 15px;">
+              Para lhe oferecer mais conforto e comodidade, o hotel coloca alguns equipamentos
+              a sua disposição para serem emprestados:
+            </p>
+            <div class="subcategory-data"></div>
+
+            <div class="attention">
+              <strong>
+                "Esses equipamentos são emprestados como cortesia."
+              </strong>
+            </div>
+          </div>
+
+          <div class="subcategory">
+            <h3 class="subcategory-title">Animais - Pets</h3>
+            <div class="subcategory-data"></div>
+          </div>
+        </div>
+      </div> <!-- ./ Fim serviços do resort -->
+    </section>  <!-- ./ Fim Listagem de conteúdo -->
+
+    <!-- Container de resultados do filtro -->
+    <section class="custom-search invisible">
+      <p>
+        <span class="foundItems"></span>
+        Resultados
+      </p>
+
+      <div class="custom-data">
+        <ul class="items-list"></ul>
+      </div>
+    </section> <!-- ./ Fim container resultados do filtro -->
+  </main> <!-- ./ Fim conteúdo principal -->
+
+  <!-- Scripts -->
+  <script rel="preload" src="./src/data/data.js"></script>
+  <script src="./src/js/utils.js"></script>
+  <script src="./src/js/app.js"></script>
+</body>
+
+</html>
